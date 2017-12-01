@@ -175,5 +175,12 @@
       - name: log_topic
 
   roles:
-    - zookeeper
-    - kafka
+    - mohsenSy.zookeeper
+    - mohsenSy.kafka
+- hosts: elasticsearch_servers
+  become: true
+  gather_facts: true
+
+  roles:
+    - mohsenSy.java
+    - mohsenSy.elasticsearch
